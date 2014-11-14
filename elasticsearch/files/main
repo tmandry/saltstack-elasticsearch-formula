@@ -1,5 +1,5 @@
 {%- if datamap.config.main.format|default('YAML') == 'YAML' -%}
-  {{- datamap.settings|default({})|yaml(False) -}}
+  {{- datamap.settings|default({})|yaml -}}
 {%- elif datamap.config.main.format|default('YAML') == 'JSON' -%}
   {{- datamap.settings|default({})|json -}}
 {%- endif -%}
